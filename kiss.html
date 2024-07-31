@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiss the Screen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            flex-direction: column;
+            background-image: url('hearts_background.jpg'); /* Replace with the actual path to a hearts background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .message {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .heart {
+            width: 50px;
+            height: 50px;
+            background-image: url('heart.png'); /* Replace with the actual path to the heart image */
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            opacity: 0.2;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        .heart:nth-child(1) { top: 10%; left: 20%; animation-duration: 5s; }
+        .heart:nth-child(2) { top: 30%; left: 25%; animation-duration: 7s; animation-delay: 2s; }
+        .heart:nth-child(3) { top: 50%; left: 30%; animation-duration: 4s; animation-delay: 4s; }
+        .heart:nth-child(4) { top: 70%; left: 35%; animation-duration: 6s; animation-delay: 1s; }
+        .heart:nth-child(5) { top: 20%; left: 40%; animation-duration: 5s; animation-delay: 3s; }
+        .heart:nth-child(6) { top: 40%; left: 45%; animation-duration: 8s; animation-delay: 2s; }
+        .heart:nth-child(7) { top: 60%; left: 50%; animation-duration: 6s; animation-delay: 5s; }
+        .heart:nth-child(8) { top: 80%; left: 55%; animation-duration: 7s; animation-delay: 4s; }
+        .heart:nth-child(9) { top: 15%; left: 60%; animation-duration: 5s; animation-delay: 1s; }
+        .heart:nth-child(10) { top: 35%; left: 65%; animation-duration: 6s; animation-delay: 3s; }
+        .heart:nth-child(11) { top: 55%; left: 70%; animation-duration: 7s; animation-delay: 2s; }
+        .heart:nth-child(12) { top: 75%; left: 75%; animation-duration: 4s; animation-delay: 5s; }
+        .heart-button {
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background-image: url('heart.png'); /* Replace with the actual path to the heart image */
+            background-size: contain;
+            background-repeat: no-repeat;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            opacity: 0.8;
+        }
+        .heart-button:hover {
+            opacity: 1;
+        }
+        .next-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1;
+        }
+        .next-button:hover {
+            background-color: #ff1493;
+        }
+        #surprise-message {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            max-width: 800px;
+            color: #333;
+        }
+    </style>
+    <script>
+        function showSurprise() {
+            setTimeout(function() {
+                document.getElementById('surprise-message').style.display = 'block';
+            }, 5000);
+        }
+        function playSong() {
+            document.getElementById('background-song').play();
+        }
+    </script>
+</head>
+<body onload="showSurprise()">
+    <div class="message">Kiss the screen to get a surprise.</div>
+    <button class="heart-button" onclick="playSong()"></button>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <audio id="background-song" loop>
+        <source src="background_song.mp3" type="audio/mpeg"> <!-- Replace with the actual path to the background song file -->
+        Your browser does not support the audio element.
+    </audio>
+    <div id="surprise-message">
+        Yooo, bb! Happy Girlfriend Day!! For real, I can’t believe how lucky I am to have the best girlfriend in the world—nah, actually the best fkn wife ever 🥺. Like, you make every day so much better, and I'm so grateful for everything you do for me. You're always there, making me smile and laugh even when things get tough. I swear you’re the only one who makes all my worries disappear, and I just wanna hang out with you sooo bad. I miss you so much. Can’t wait for all the amazing times ahead and spending forever with you. Love you SOOOOOO much, bb. Mwah mwah 🥰.
+
+        Honestly, you mean everything to me. You’re the person I look forward to talking to every day, the one who makes everything feel right even when it’s all messed up. It’s crazy how just hearing your voice or seeing your texts can change my whole mood. You’ve got this way of making me feel so special and loved, and I honestly don’t know what I’d do without you. We’ve been through so much together, and I’m so proud of us for sticking it out and getting stronger every day. I know I don’t always show it the best, but I appreciate you more than words can say.
+
+        You do so much for me, and I want you to know that it never goes unnoticed. From the little things like your good morning texts to the big things like always being there for me when I need you, you’re truly one of a kind. And, I know I haven’t been the best boyfriend lately, but I promise I’m getting better and will make you feel so loved. Remember that time we stayed up all night talking about our future? That’s one of my favourite memories. I can’t wait to make all those dreams come true with you. I legit see us getting married, having kids, and just living our best lives together. You’re the one I want to do all that with. No one else even comes close to making me feel the way you do.
+
+        I know we can’t always be together right now, and that sucks, but it just makes me look forward to our time together even more. When we finally get to hang out again, it’s gonna be the best. We’re gonna do all the things we’ve been talking about and so much more. Just thinking about it makes me so excited for the future. We’re gonna have so many amazing memories together, I just know it, baby.
+
+        Also, I just wanna say thank you for always being so understanding. I know it’s not easy dealing with all my stress and everything going on, but you handle it so well. You always know just what to say to make me feel better, and I love you so much for that. You’re my person, my better half, and I’m so grateful every day that you’re mine. So, on this special day, I just wanted to remind you how much you mean to me. You’re the best girlfriend anyone could ever ask for, and I’m so lucky to have you. I love you more than words can express, and I can’t wait to see what the future holds for us. Happy Girlfriend Day! Mwah mwah, love you soooo much! 🥰💕
+    </div>
+    <button class="next-button" onclick="location.href='date.html'">Next</button>
+</body>
+</html>

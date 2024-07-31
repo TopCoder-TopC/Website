@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            flex-direction: column;
+        }
+        .message {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .heart-button {
+            width: 50px;
+            height: 50px;
+            background-image: url('heart.png'); /* Replace with the actual path to the heart image */
+            background-size: contain;
+            background-repeat: no-repeat;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        .heart-button:hover {
+            opacity: 0.8;
+        }
+        audio {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">A song that reminds me of you</div>
+    <button class="heart-button" onclick="document.getElementById('song').play()"></button>
+    <audio id="song" controls style="display:none;">
+        <source src="song.mp3" type="audio/mpeg"> <!-- Replace with the actual path to the song file -->
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
